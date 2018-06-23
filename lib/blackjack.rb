@@ -52,10 +52,10 @@ end
 
 def runner
   welcome
-  black_jack = initial_round
-  until black_jack > 21
-    black_jack = hit?(black_jack)
-    display_card_total(black_jack)
+  current_total = initial_round
+  until current_total > 21
+    current_total = hit?(current_total)
+    display_card_total(current_total)
   end
-  end_game(black_jack)
+  end_game(current_total)
 end
