@@ -44,10 +44,11 @@ def hit? (total)
 
   case response
     when "s"
-
+      #move to dealer's hand
     when "h"
     total += deal_card
     else
+      invalid_command
   end
 
 total
@@ -55,6 +56,8 @@ end
 
 def invalid_command
   # code invalid_command here
+  puts "Please enter a valid command"
+  prompt_user
 end
 
 #####################################################
